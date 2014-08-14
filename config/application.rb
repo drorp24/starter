@@ -19,5 +19,12 @@ module ReDev
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+
+    # Configure the rails command to generate haml files instead of erb files
+    config.generators do |g|
+      g.template_engine :haml
+    end
+
   end
 end
