@@ -22,8 +22,10 @@ module ReDev
 
 
     # Configure the rails command to generate haml files instead of erb files
+    # Configure the rails command to generate rspec test files instead of unit test files
     config.generators do |g|
       g.template_engine :haml
+      g.test_framework :rspec
     end
 
   end
