@@ -36,6 +36,9 @@ end
 
 
 gem 'devise'
+gem 'omniauth-linkedin'
+
+
 
 
 gem 'haml-rails'
