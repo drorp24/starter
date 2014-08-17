@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @general_profile.user_id
+%p
+  %b Title:
+  = @general_profile.title
+
+= link_to 'Edit', edit_general_profile_path(@general_profile)
+\|
+= link_to 'Back', general_profiles_path
