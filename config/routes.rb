@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
 
-  resources :mentor_profiles
-
   resources :organizations
 
   resources :professional_profiles
