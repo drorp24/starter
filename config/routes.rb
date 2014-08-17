@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :organizations
+
   resources :professional_profiles
 
   resources :general_profiles
