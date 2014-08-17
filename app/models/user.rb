@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 
 
   has_one :general_profile
+  has_one :professional_profile
   has_many :authentications
 
   def apply_omniauth(omniauth)
