@@ -1,0 +1,21 @@
+%h1 Listing professional_profiles
+
+%table
+  %tr
+    %th User
+    %th Position
+    %th
+    %th
+    %th
+
+  - @professional_profiles.each do |professional_profile|
+    %tr
+      %td= professional_profile.user_id
+      %td= professional_profile.position
+      %td= link_to 'Show', professional_profile
+      %td= link_to 'Edit', edit_professional_profile_path(professional_profile)
+      %td= link_to 'Destroy', professional_profile, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Professional profile', new_professional_profile_path

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :professional_profiles
+
   resources :general_profiles
 
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
