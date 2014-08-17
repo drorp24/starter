@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :trackable, :validatable
 
+
+  has_one :general_profile
   has_many :authentications
 
   def apply_omniauth(omniauth)
