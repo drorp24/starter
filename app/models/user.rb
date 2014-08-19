@@ -29,7 +29,6 @@ class User < ActiveRecord::Base
   has_one :general_profile
   has_one :professional_profile
   has_many :user_profiles
-  has_many :profiles, :through => :user_profiles
 
   def apply_omniauth(omniauth)
     self.email = omniauth.info.email if email.blank?
