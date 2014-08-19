@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :startup_profiles
+
   resources :mentor_profile_academics
 
   resources :mentor_profile_businesses
