@@ -1,0 +1,2 @@
+module MentorProfileAcademicsHelper
+end
