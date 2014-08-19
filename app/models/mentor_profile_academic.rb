@@ -9,4 +9,5 @@
 #
 
 class MentorProfileAcademic < ActiveRecord::Base
+  has_one :mentor_profile, as: :mentor_profile, dependent: :destroy
 end

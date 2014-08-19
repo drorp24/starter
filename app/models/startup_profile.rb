@@ -9,4 +9,5 @@
 #
 
 class StartupProfile < ActiveRecord::Base
+  has_one :user_profile, as: :profile, dependent: :destroy
 end

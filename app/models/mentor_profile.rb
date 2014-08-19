@@ -11,5 +11,7 @@
 #
 
 class MentorProfile < ActiveRecord::Base
+  has_one :user_profile, as: :profile, dependent: :destroy
+  belongs_to :mentor_profile, polymorphic: true
 
 end
