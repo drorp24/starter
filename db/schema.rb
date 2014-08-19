@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140816151949) do
+ActiveRecord::Schema.define(version: 20140817180750) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,43 @@ ActiveRecord::Schema.define(version: 20140816151949) do
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
     t.string   "secret"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "general_profiles", force: true do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mentor_profiles", force: true do |t|
+    t.string   "title"
+    t.integer  "mentor_profile_id"
+    t.string   "mentor_profile_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "organizations", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "professional_profiles", force: true do |t|
+    t.integer  "user_id"
+    t.string   "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_profiles", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "profile_id"
+    t.string   "profile_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
