@@ -1,0 +1,16 @@
+= form_for @professional_profile do |f|
+  - if @professional_profile.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@professional_profile.errors.count, "error")} prohibited this professional_profile from being saved:"
+      %ul
+        - @professional_profile.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :user_id
+    = f.number_field :user_id
+  .field
+    = f.label :position
+    = f.text_field :position
+  .actions
+    = f.submit 'Save'

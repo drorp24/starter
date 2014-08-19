@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @professional_profile.user_id
+%p
+  %b Position:
+  = @professional_profile.position
+
+= link_to 'Edit', edit_professional_profile_path(@professional_profile)
+\|
+= link_to 'Back', professional_profiles_path

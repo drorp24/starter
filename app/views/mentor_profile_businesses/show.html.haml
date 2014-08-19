@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @mentor_profile_business.title
+
+= link_to 'Edit', edit_mentor_profile_business_path(@mentor_profile_business)
+\|
+= link_to 'Back', mentor_profile_businesses_path

@@ -1,0 +1,19 @@
+%h1 Listing mentor_profile_businesses
+
+%table
+  %tr
+    %th Title
+    %th
+    %th
+    %th
+
+  - @mentor_profile_businesses.each do |mentor_profile_business|
+    %tr
+      %td= mentor_profile_business.title
+      %td= link_to 'Show', mentor_profile_business
+      %td= link_to 'Edit', edit_mentor_profile_business_path(mentor_profile_business)
+      %td= link_to 'Destroy', mentor_profile_business, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Mentor profile business', new_mentor_profile_business_path

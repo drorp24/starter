@@ -1,0 +1,19 @@
+%h1 Listing mentor_profile_academics
+
+%table
+  %tr
+    %th Title
+    %th
+    %th
+    %th
+
+  - @mentor_profile_academics.each do |mentor_profile_academic|
+    %tr
+      %td= mentor_profile_academic.title
+      %td= link_to 'Show', mentor_profile_academic
+      %td= link_to 'Edit', edit_mentor_profile_academic_path(mentor_profile_academic)
+      %td= link_to 'Destroy', mentor_profile_academic, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Mentor profile academic', new_mentor_profile_academic_path

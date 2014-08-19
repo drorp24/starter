@@ -1,0 +1,19 @@
+%h1 Listing startup_profiles
+
+%table
+  %tr
+    %th Role
+    %th
+    %th
+    %th
+
+  - @startup_profiles.each do |startup_profile|
+    %tr
+      %td= startup_profile.role
+      %td= link_to 'Show', startup_profile
+      %td= link_to 'Edit', edit_startup_profile_path(startup_profile)
+      %td= link_to 'Destroy', startup_profile, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Startup profile', new_startup_profile_path
