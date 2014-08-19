@@ -13,4 +13,8 @@
 class UserProfile < ActiveRecord::Base
   belongs_to :user
   belongs_to :profile, polymorphic: true
+
+  scope :startup, -> { where(profile_type: "StartupProfile").first }
+  scope :mentor, -> { where(profile_type: "MentorProfile").first }
+
 end
