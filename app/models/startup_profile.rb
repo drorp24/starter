@@ -10,4 +10,5 @@
 
 class StartupProfile < ActiveRecord::Base
   has_one :user_profile, as: :profile, dependent: :destroy
+  has_many :profile_sections, through: :user_profile
 end

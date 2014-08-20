@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140819081017) do
+ActiveRecord::Schema.define(version: 20140819232752) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,8 +48,6 @@ ActiveRecord::Schema.define(version: 20140819081017) do
 
   create_table "mentor_profiles", force: true do |t|
     t.string   "title"
-    t.integer  "mentor_profile_id"
-    t.string   "mentor_profile_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -64,6 +62,14 @@ ActiveRecord::Schema.define(version: 20140819081017) do
   create_table "professional_profiles", force: true do |t|
     t.integer  "user_id"
     t.string   "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "profile_sections", force: true do |t|
+    t.integer  "user_profile_id"
+    t.string   "section_type"
+    t.integer  "section_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

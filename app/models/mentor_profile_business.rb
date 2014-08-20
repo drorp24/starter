@@ -9,5 +9,5 @@
 #
 
 class MentorProfileBusiness < ActiveRecord::Base
-  has_one :mentor_profile, as: :mentor_profile, dependent: :destroy
+  has_one :profile_section, as: :section, dependent: :destroy
 end

@@ -30,6 +30,14 @@ class User < ActiveRecord::Base
   has_one :professional_profile
   has_many :user_profiles
 
+  def mentor_profile
+    user_profiles.mentor.profile
+  end
+  
+  def startup_profile
+    user_profiles.startup.profile
+  end
+  
   def apply_omniauth(omniauth)
     self.email = omniauth.info.email if email.blank?
     authentications.build(:provider => omniauth.provider, :uid => omniauth.uid)
